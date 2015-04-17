@@ -1,6 +1,6 @@
 $(document).on('ready', function() {
 
-
+// 1) write a function which returns the 'name' property
 	var name= {
 		name:[],
 		age:[]
@@ -12,7 +12,7 @@ $(document).on('ready', function() {
 
 
 
-
+// 2) from an array of strings return the total number of letters in the strings (19)
 	var totalLetters = function(x){
 		var y = x.toString();
 
@@ -25,10 +25,7 @@ $(document).on('ready', function() {
 
 
 
-
-
-
-
+// 3) return new object with a key from the first and value from the second ({city:denver})
 // asigning b to property a of emptyO
 	var keyvalue = function(a, b){
 		var emptyO = {};
@@ -39,7 +36,7 @@ $(document).on('ready', function() {
 
 
 
-
+// 4) takes array and neg number and returns value given index ('sally')
 	var negativeIndex = function(a, b){
 		var array = [];
 		for (var i=0; i<a.length; i++){
@@ -52,13 +49,13 @@ $(document).on('ready', function() {
 		else{
 			var select2 =a.slice(b);
 			return select2;
-		}
-		
+		}		
 
 	};
 	console.log((negativeIndex(['jerry', 'sarah', 'sally'], -1)));
 
 
+// 5) removes m characters ('faily')
 	var removeM = function(mWord){
 		var noM = mWord.replace(/m/g, '');
 		return noM;
@@ -67,7 +64,8 @@ $(document).on('ready', function() {
 
 
 
-	// #6 for in loop
+// 6) coneol logs key is value ('firstName is pork, lastName is chops')
+	// for in loop
 
 	var printObject = function(a){
 		var obj = a;
@@ -79,6 +77,22 @@ $(document).on('ready', function() {
 	(printObject({ firstName: 'pork', lastName: 'chops' }));
 
 
+
+// 7) returns all vowels (a e i o u)
+	var vowels = function(a){	
+		var output = [];
+		for (var i = 0 ; i < a.length ; i++){
+			if (a[i] === 'a' || a[i] === 'e' || a[i] === 'i' || a[i] === 'o' || a[i] === 'u'){
+				output.push(a[i]);
+			}		
+		}
+		return output;
+	};
+	console.log(vowels('What evil odd ducks!'));
+
+
+
+// 8) returns true if every adjacent item is the same (true)
 	var twins = function(a){	
 		for (var i=0; i<a.length; i+=2){	
 			if (a[i]!== a[i+1]) {
@@ -91,6 +105,7 @@ $(document).on('ready', function() {
 	
 
 
+// 9) returns true if any are true (false)
 
 	var or = function(a){
 		for (var i = 0 ; i<a.length ; i++){
@@ -104,7 +119,7 @@ $(document).on('ready', function() {
 
 
 
-
+// 10) returns only unique values  [a, b, c, test, d]
 	var unique = function(a){
 		var clone = a.slice(0);
 		return clone;
@@ -114,16 +129,6 @@ $(document).on('ready', function() {
 
 
 
-	var vowels = function(a){	
-		var output = [];
-		for (var i = 0 ; i < a.length ; i++){
-			if (a[i] === 'a' || a[i] === 'e' || a[i] === 'i' || a[i] === 'o' || a[i] === 'u'){
-				output.push(a[i]);
-			}		
-		}
-		return output;
-	};
-	console.log(vowels('What evil odd ducks!'));
 
 
 
